@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/logo.png">
+    <title>PD Market - Mercado</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html" id="alogo"><img src="assets/logo.png" alt="Logo da PD Market" id="logo"></a>
+
+        <form class="search-container" role="search">
+
+            <input type="checkbox" id="search-trigger" class="search-checkbox">
+
+            <label for="search-trigger" class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 45px; height: 45px;">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </label>
+
+            <input type="search" class="search-input" placeholder="Buscar produto...">
+        </form>
+
+        <details open>
+            <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 50px; height: 50px;">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </summary>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mercado.html">Comprar</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </details>
+
+        <a href="#" class="carrinho-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+
+            <span class="badge">3</span>
+        </a>
+
+    </header>
+
+    <main id="mercado">
+        <section id="categorias">
+            <h1>Categorias</h1>
+        <ul>
+            <li>
+                <a href="#frutas-vegetais">
+                <figure>
+                    <img src="assets/frutas-vegetais.jpg" alt="Frutas e Vegetais">
+                    <figcaption><a href="#frutas-vegetais">Frutas e Vegetais</a></figcaption>
+                </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#aves-carnes">
+                <figure>
+                    <img src="assets/carnes.jpg" alt="Carnes">
+                    <figcaption><a href="#aves-e-carnes">Aves e Carnes</a></figcaption>
+                </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#padaria">
+                <figure>
+                    <img src="assets/padaria.jpg" alt="Padaria">
+                    <figcaption><a href="#padaria">Padaria</a></figcaption>
+                </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#bebidas">
+                <figure>
+                    <img src="assets/bebidas.jpg" alt="Bebidas">
+                    <figcaption><a href="#bebidas">Bebidas</a></figcaption>
+                </figure>
+                </a>
+            </li>
+            <li>
+                <a href="#limpeza">
+                <figure>
+                    <img src="assets/limpeza.jpg" alt="Limpeza">
+                    <figcaption><a href="#limpeza">Limpeza</a></figcaption>
+                </figure>
+                </a>
+            </li>
+        </ul>
+        </section>
+
+        <section id="filtro">
+            <details>
+                <summary>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" style="width: 20px; height: 20px; vertical-align: middle;">
+                        <path d="M4 5h16l-6 7v7l-4-2v-5L4 5z" />
+                    </svg>
+                </summary>
+                <form>
+                    <label for="preco-minimo">Preço Mínimo:</label>
+                    <input type="range" id="preco-minimo" name="preco-minimo" min="1" max="100" value="0" class="slider">
+                    <output for="preco-minimo" id="out">R$1.00</output>
+                    <br>
+                    <label for="preco-maximo">Preço Máximo:</label>
+                    <input type="range" id="preco-maximo" name="preco-maximo" min="1" max="100" value="100" class="slider">
+                    <span id="valor-maximo">R$100.00</span>
+                    <br>
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <optgroup label="Categorias">
+                            <option value="">Todas</option>
+                            <option value="frutas-vegetais">Frutas e Vegetais</option>
+                            <option value="aves-carnes">Aves e Carnes</option>
+                            <option value="padaria">Padaria</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="limpeza">Limpeza</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <p id="p-marca"><b>Marca:</b></p>
+                    <input type="text" list="sugestoes-produtos" id="input-marca">
+                    <datalist id="sugestoes-produtos">
+                        <option value="Visconti">
+                        <option value="Coca-Cola">
+                    </datalist>
+                    <br>
+                    <button type="submit">Aplicar Filtros</button>
+            </details>
+        </section>
+
+        <section id="produtos">
+
+        <aside id="adc-carrinho">
+            <input type="checkbox" id="cart-modal-toggle" aria-hidden="true">
+            
+            <div class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-modal-title">
+                <div class="cart-modal__box">
+                    <div class="cart-modal__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div id="cart-modal-title"><p>Item adicionado ao carrinho</p></div>
+                    <div class="cart-modal__actions">
+                        <label for="cart-modal-toggle" class="modal-ok">OK</label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <section id="frutas-vegetais" class="categoria-produtos">
+            <header class="head-categoria">
+                <h2>Frutas e Vegetais</h2>
+            </header>
+            <div class="body-categoria">
+                <article class="card-produtos">
+                    <h3>Banana Prata</h3>
+                    <label for="cardique-banana-prata">
+                    <figure>
+                        <p class="tag-promocional"><strong>OFERTA</strong></p>
+                        <img src="assets/banana-prata.jpg" alt="Banana Prata">
+                        <figcaption>Banana Prata</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 4,99</p>
+                        <p class="preço">R$ 2,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Maçã Verde</h3>
+                    <label for="cardique-maca-verde">
+                    <figure>
+                        <img src="assets/maca-verde.jpg" alt="Maçã Verde">
+                        <figcaption>Maçã Verde</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 6,49</p>
+                        <p class="preço">R$ 3,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Laranja Serra D'Água</h3>
+                    <label for="cardique-laranja-serra-dagua">
+                    <figure>
+                        <img src="assets/laranja-serra-dagua.jpg" alt="Laranja Serra D'Água">
+                        <figcaption>Laranja Serra D'Água</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 18,99</p>
+                        <p class="preço">R$ 12,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Alface Americana</h3>
+                    <label for="cardique-alface-americana">
+                    <figure>
+                        <img src="assets/alface-americana.jpg" alt="Alface Americana">
+                        <figcaption>Alface Americana</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 7,99</p>
+                        <p class="preço">R$ 4,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Tomate Italiano</h3>
+                    <label for="cardique-tomate-italiano">
+                    <figure>
+                        <img src="assets/tomate-italiano.jpg" alt="Tomate Italiano">
+                        <figcaption>Tomate Italiano</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 9,99</p>
+                        <p class="preço">R$ 5,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Cenoura</h3>
+                    <label for="cardique-cenoura">
+                    <figure>
+                        <img src="assets/cenoura.jpg" alt="Cenoura">
+                        <figcaption>Cenoura</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 5,49</p>
+                        <p class="preço">R$ 3,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Abacaxi Pérola</h3>
+                    <label for="cardique-abacaxi-perola">
+                    <figure>
+                        <img src="assets/abacaxi-perola.jpg" alt="Abacaxi Pérola">
+                        <figcaption>Abacaxi Pérola</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 12,99</p>
+                        <p class="preço">R$ 7,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+
+                <article class="card-produtos">
+                    <h3>Melancia</h3>
+                    <label for="cardique-melancia">
+                    <figure>
+                        <img src="assets/melancia.jpg" alt="Melancia">
+                        <figcaption>Melancia</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 15,99</p>
+                        <p class="preço">R$ 9,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+            </div>
+        </section>
+        <hr>
+        <section id="aves-carnes" class="categoria-produtos">
+            <header class="head-categoria">
+                <h2>Aves e Carnes</h2>
+            </header>
+            <div class="body-categoria">
+                <article class="card-produtos">
+                    <h3>Peito de Frango</h3>
+                    <label for="cardique-peito-frango">
+                    <figure>
+                        <img src="assets/peito-frango.jpg" alt="Peito de Frango Congelado 1kg">
+                        <figcaption>Peito de Frango Congelado 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 24,99</p>
+                        <p class="preço">R$ 18,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Coxa de Frango</h3>
+                    <label for="cardique-coxa-frango">
+                    <figure>
+                        <img src="assets/coxa-frango.jpg" alt="Coxa de Frango Congelada 1kg">
+                        <figcaption>Coxa de Frango Congelada 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 17,99</p>
+                        <p class="preço">R$ 12,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Peito Bovino</h3>
+                    <label for="cardique-peito-bovino">
+                    <figure>
+                        <img src="assets/peito-bovino.jpg" alt="Peito Bovino 1kg">
+                        <figcaption>Peito Bovino 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 39,99</p>
+                        <p class="preço">R$ 29,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Linguiça Maria Rosa</h3>
+                    <label for="cardique-linguica-maria-rosa">
+                    <figure>
+                        <img src="assets/linguiça-maria-rosa.jpg" alt="Linguiça Maria Rosa 1kg">
+                        <figcaption>Linguiça Maria Rosa 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 24,99</p>
+                        <p class="preço">R$ 19,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Bife de Alcatra</h3>
+                    <label for="cardique-bife-alcatra">
+                    <figure>
+                        <img src="assets/bife-alcatra.jpg" alt="Bife de Alcatra 1kg">
+                        <figcaption>Bife de Alcatra 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 49,99</p>
+                        <p class="preço">R$ 39,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Filé de Tilápia</h3>
+                    <label for="cardique-file-tilapia">
+                    <figure>
+                        <img src="assets/file-tilapia.jpg" alt="Filé de Tilápia Congelado 1kg">
+                        <figcaption>Filé de Tilápia Congelado 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 34,99</p>
+                        <p class="preço">R$ 24,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Salsicha Hot Dog</h3>
+                    <label for="cardique-salsicha-hot-dog">
+                    <figure>
+                        <img src="assets/salsicha-hot-dog.jpg" alt="Salsicha Hot Dog 1kg">
+                        <figcaption>Salsicha Hot Dog 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 14,99</p>
+                        <p class="preço">R$ 9,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Picanha Fatiada</h3>
+                    <label for="cardique-picanha-fatiada">
+                    <figure>
+                        <img src="assets/picanha-fatiada.jpg" alt="Picanha Fatiada 1kg">
+                        <figcaption>Picanha Fatiada 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 69,99</p>
+                        <p class="preço">R$ 34,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+            </div>
+        </section>
+        <hr>
+        <section id="padaria" class="categoria-produtos">
+            <header class="head-categoria">
+                <h2>Padaria</h2>
+            </header>
+        
+            <div class="body-categoria">
+                <article class="card-produtos">
+                    <h3>Pão de Forma</h3>
+                    <label for="cardique-pao-de-forma">
+                    <figure>
+                        <img src="assets/pao-de-forma.jpg" alt="Pão de Forma 500g">
+                        <figcaption>Pão de Forma Sevenboys 500g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 7,49</p>
+                        <p class="preço">R$ 4,69</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Bolo de Chocolate</h3>
+                    <label for="cardique-bolo-chocolate">
+                    <figure>
+                        <img src="assets/bolo-chocolate.jpg" alt="Bolo de Chocolate 500g">
+                        <figcaption>Bolo de Chocolate 500g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 19,99</p>
+                        <p class="preço">R$ 15,00</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Croissant</h3>
+                    <label for="cardique-croissant">
+                    <figure>
+                        <img src="assets/croissant.jpg" alt="Croissant 80g">
+                        <figcaption>Croissant 80g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 4,99</p>
+                        <p class="preço">R$ 3,00</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Panetone Visconti</h3>
+                    <label for="cardique-panetone-visconti">
+                    <figure>
+                        <img src="assets/panetone.jpg" alt="Panetone Visconti 400g">
+                        <figcaption>Panetone Visconti 400g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 24,99</p>
+                        <p class="preço">R$ 15,00</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Pão Francês</h3>
+                    <label for="cardique-pao-frances">
+                    <figure>
+                        <img src="assets/pao,frances.jpg" alt="Pão Francês 50g">
+                        <figcaption>Pão Francês 50g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 0,99</p>
+                        <p class="preço">R$ 0,59</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Baguete</h3>
+                    <label for="cardique-baguete">
+                    <figure>
+                        <img src="assets/baguete.jpg" alt="Baguete 300g">
+                        <figcaption>Baguete 300g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 5,49</p>
+                        <p class="preço">R$ 3,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Salgado de Frango</h3>
+                    <label for="cardique-salgado-frango">
+                    <figure>
+                        <img src="assets/salgado-frango.jpg" alt="Salgado de Frango 100g">
+                        <figcaption>Salgado de Frango 100g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 6,99</p>
+                        <p class="preço">R$ 4,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Torta de Limão</h3>
+                    <label for="cardique-torta-limao">
+                    <figure>
+                        <img src="assets/torta-limao.jpg" alt="Torta de Limão 500g">
+                        <figcaption>Torta de Limão 500g</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 22,99</p>
+                        <p class="preço">R$ 16,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+
+                </article>
+            </div>
+        </section>
+        <hr>
+        <section id="bebidas" class="categoria-produtos">
+            <header class="head-categoria">
+                <h2>Bebidas</h2>
+            </header>
+            <div class="body-categoria">
+                <article class="card-produtos">
+                    <h3>Coca Cola</h3>
+                    <label for="cardique-coca-cola">
+                    <figure>
+                        <img src="assets/coca-cola.jpg" alt="coca Cola 2L">
+                        <figcaption>Coca Cola 2L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 7,99</p>
+                        <p class="preço">R$ 5,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Suco de Laranja</h3>
+                    <label for="cardique-suco-laranja">
+                    <figure>
+                        <img src="assets/suco-laaranja.jpg" alt="Suco de Laranja 1L">
+                        <figcaption>Suco de Laranja 1L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 6,49</p>
+                        <p class="preço">R$ 4,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Água Mineral</h3>
+                    <label for="cardique-agua-mineral">
+                    <figure>
+                        <img src="assets/agua-mineral.jpg" alt="Água Mineral 500ml">
+                        <figcaption>Água Mineral 500ml</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 2,49</p>
+                        <p class="preço">R$ 1,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Cerveja Skol</h3>
+                    <label for="cardique-cerveja-skol">
+                    <figure>
+                        <img src="assets/cerveja-skol.jpg" alt="Cerveja Skol Lata 350ml">
+                        <figcaption>Cerveja Skol Lata 350ml</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 3,49</p>
+                        <p class="preço">R$ 2,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Chá Gelado</h3>
+                    <label for="cardique-cha-gelado">
+                    <figure>
+                        <img src="assets/cha-gelado.jpg" alt="Chá Gelado 1L">
+                        <figcaption>Chá Gelado 1L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 5,99</p>
+                        <p class="preço">R$ 3,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Energético Red Bull</h3>
+                    <label for="cardique-energetico-red-bull">
+                    <figure>
+                        <img src="assets/energetico-red-bull.jpg" alt="Energético Red Bull Lata 250ml">
+                        <figcaption>Energético Red Bull Lata 250ml</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 8,99</p>
+                        <p class="preço">R$ 6,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Guaraná</h3>
+                    <label for="cardique-guarana">
+                    <figure>
+                        <img src="assets/guarana.jpg" alt="Guaraná 2L">
+                        <figcaption>Guaraná 2L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 6,49</p>
+                        <p class="preço">R$ 4,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Água de Coco</h3>
+                    <label for="cardique-agua-coco">
+                    <figure>
+                        <img src="assets/agua-coco.jpg" alt="Água de Coco 1L">
+                        <figcaption>Água de Coco 1L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 7,99</p>
+                        <p class="preço">R$ 5,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+            </div>
+        </section>
+        <hr>
+        <section id="limpeza" class="categoria-produtos">
+            <header class="head-categoria">
+                <h2>Limpeza</h2>
+            </header>
+            <div class="body-categoria">
+                <article class="card-produtos">
+                    <h3>Detergente Ypê</h3>
+                    <label for="cardique-detergente-ype">
+                    <figure>
+                        <p class="tag-promocional"><strong>OFERTA</strong></p>
+                        <img src="assets/detergente-ype.jpg" alt="Detergente Ypê 500ml">
+                        <figcaption>Detergente Ypê 500ml</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 4,99</p>
+                        <p class="preço">R$ 2,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Água Sanitária Qboa</h3>
+                    <label for="cardique-agua-sanitario-qboa">
+                    <figure>
+                        <img src="assets/agua-sanitária-qboa.jpg" alt="Água Sanitária Qboa 1L">
+                        <figcaption>Água Sanitária Qboa 1L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 6,49</p>
+                        <p class="preço">R$ 3,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Sabão em Pó Omo</h3>
+                    <label for="cardique-sabao-omo">
+                    <figure>
+                        <img src="assets/sabao-omo.jpg" alt="Sabão em Pó Omo 1kg">
+                        <figcaption>Sabão em Pó Omo 1kg</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 18,99</p>
+                        <p class="preço">R$ 12,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Desinfetante Pinho Sol</h3>
+                    <label for="cardique-desinfetante-pinho-sol">
+                    <figure>
+                        <img src="assets/desinfetante-pinho-sol.jpg" alt="Desinfetante Pinho Sol 500ml">
+                        <figcaption>Desinfetante Pinho Sol 500ml</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 7,99</p>
+                        <p class="preço">R$ 4,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Limpador Veja</h3>
+                    <label for="cardique-limpador-veja">
+                    <figure>
+                        <img src="assets/limpador-veja.jpg" alt="Limpador Veja 500ml">
+                        <figcaption>Limpador Veja 500ml</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 6,49</p>
+                        <p class="preço">R$ 3,49</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Esponja de Aço</h3>
+                    <label for="cardique-esponja-aco">
+                    <figure>
+                        <img src="assets/esponja-aco.jpg" alt="Esponja de Aço Assolan 5un">
+                        <figcaption>Esponja de Aço Assolan 5un</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 9,99</p>
+                        <p class="preço">R$ 6,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Luva de Limpeza</h3>
+                    <label for="cardique-luva-limpeza">
+                    <figure>
+                        <img src="assets/luva-limpeza.jpg" alt="Luva de Limpeza 1par">
+                        <figcaption>Luva de Limpeza 1par</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 5,99</p>
+                        <p class="preço">R$ 3,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+                <article class="card-produtos">
+                    <h3>Amaciante Downy</h3>
+                    <label for="cardique-amaciante-downy">
+                    <figure>
+                        <img src="assets/amaciante-downy.jpg" alt="Amaciante Downy 2L">
+                        <figcaption>Amaciante Downy 2L</figcaption>
+                    </figure>
+                    </label>
+                    <footer class="product-info">
+                        <p class="preço-antigo">R$ 19,99</p>
+                        <p class="preço">R$ 14,99</p>
+                        <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
+                    </footer>
+                </article>
+            </div>
+
+        </section>
+<hr>
+        <section id="informações-produtos"> 
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-banana-prata" aria-hidden="true">
+            <article class="card-informação" id="banana-prata">
+                <h3><em>Informações Nutricionais - Banana Prata</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Quantidade por porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>89 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>23 g</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>12 g</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>1.1 g</td></tr>
+                        <tr><td><h4>Gorduras Totais</h4></td><td>0.3 g</td></tr>
+                        <tr><td><h4>Gorduras Saturadas</h4></td><td>0.1 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>2.6 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>1 mg</td></tr>
+                    </tbody>
+                    <tfoot><tr><td colspan="2" id="msg"><small><u><i>Informações nutricionais estimadas — PD Market</i></u></small></td></tr></tfoot>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Banana prata fresca (100%).</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Armazenar em local fresco e arejado; evitar sol direto. Refrigerar se cortada.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Consumir preferencialmente em até 5 dias após a compra.</dd>
+                </dl>
+                <label for="cardique-banana-prata" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-maca-verde" aria-hidden="true">
+            <article class="card-informação" id="maca-verde">
+                <h3><em>Informações Nutricionais - Maçã Verde</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Quantidade por porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>52 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>14 g</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>10 g</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>0.3 g</td></tr>
+                        <tr><td><h4>Gorduras Totais</h4></td><td>0.2 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>2.4 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>1 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Maçã verde fresca.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Local fresco e arejado; refrigerar se preferir.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Até 7 dias.</dd>
+                </dl>
+                <label for="cardique-maca-verde" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-laranja-serra-dagua" aria-hidden="true">
+            <article class="card-informação" id="laranja-serra-dagua">
+                <h3><em>Informações Nutricionais - Laranja Serra D'Água</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Quantidade por porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>47 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>12 g</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>9 g</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>0.9 g</td></tr>
+                        <tr><td><h4>Gorduras Totais</h4></td><td>0.1 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>2.4 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>0 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Laranja fresca.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Local fresco e arejado.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Consumir em até 5 dias.</dd>
+                </dl>
+                <label for="cardique-laranja-serra-dagua" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-alface-americana" aria-hidden="true">
+            <article class="card-informação" id="alface-americana">
+                <h3><em>Informações Nutricionais - Alface Americana</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>15 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>2.9 g</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>1.4 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>1.3 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>28 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Alface fresca.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar 2–5°C; lavar antes de consumir.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>3–5 dias.</dd>
+                </dl>
+                <label for="cardique-alface-americana" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-tomate-italiano" aria-hidden="true">
+            <article class="card-informação" id="tomate-italiano">
+                <h3><em>Informações Nutricionais - Tomate Italiano</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>18 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>3.9 g</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>0.9 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>1.2 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>5 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Tomate fresco.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Evitar frio extremo; conservar em local fresco.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>5–7 dias.</dd>
+                </dl>
+                <label for="cardique-tomate-italiano" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-cenoura" aria-hidden="true">
+            <article class="card-informação" id="cenoura">
+                <h3><em>Informações Nutricionais - Cenoura</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>41 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>10 g</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>4.7 g</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>0.9 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>2.8 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>69 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Cenoura fresca.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar; manter em local seco.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>7–10 dias.</dd>
+                </dl>
+                <label for="cardique-cenoura" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-abacaxi-perola" aria-hidden="true">
+            <article class="card-informação" id="abacaxi-perola">
+                <h3><em>Informações Nutricionais - Abacaxi Pérola</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
+                        <tr><td><h4>Energia</h4></td><td>50 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>13 g</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>10 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>1.4 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>1 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Abacaxi fresco.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar fatiado.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>3–5 dias.</dd>
+                </dl>
+                <label for="cardique-abacaxi-perola" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-melancia" aria-hidden="true">
+            <article class="card-informação" id="melancia">
+                <h3><em>Informações Nutricionais - Melancia</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>30 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>8 g</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>6 g</td></tr>
+                        <tr><td><h4>Fibras</h4></td><td>0.4 g</td></tr>
+                        <tr><td><h4>Água</h4></td><td>92 g</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Melancia fresca.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar fatiada.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>2–3 dias fatiada.</dd>
+                </dl>
+                <label for="cardique-melancia" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-peito-frango" aria-hidden="true">
+            <article class="card-informação" id="peito-frango">
+                <h3><em>Informações Nutricionais - Peito de Frango (cozido)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>165 kcal</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>31 g</td></tr>
+                        <tr><td><h4>Gorduras Totais</h4></td><td>3.6 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>74 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Peito de frango fresco/congelado.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Manter refrigerado/congelado conforme venda.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-peito-frango" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-coxa-frango" aria-hidden="true">
+            <article class="card-informação" id="coxa-frango">
+                <h3><em>Informações Nutricionais - Coxa de Frango (cozida)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>215 kcal</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>26 g</td></tr>
+                        <tr><td><h4>Gorduras Totais</h4></td><td>12 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>85 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Coxa de frango.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Manter congelado ou refrigerado.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-coxa-frango" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-peito-bovino" aria-hidden="true">
+            <article class="card-informação" id="peito-bovino">
+                <h3><em>Informações Nutricionais - Peito Bovino</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>250 kcal</td></tr>
+                        <tr><td><h4>Proteínas</h4></td><td>26 g</td></tr>
+                        <tr><td><h4>Gorduras Totais</h4></td><td>17 g</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Corte bovino.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerado/congelado.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-peito-bovino" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-linguica-maria-rosa" aria-hidden="true">
+            <article class="card-informação" id="linguica-maria-rosa">
+                <h3><em>Informações Nutricionais - Linguiça Maria Rosa</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>280 kcal</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>12 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>24 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>800 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Carne suína/picada, condimentos, conservantes.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar/congelar.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-linguica-maria-rosa" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-bife-alcatra" aria-hidden="true">
+            <article class="card-informação" id="bife-alcatra">
+                <h3><em>Informações Nutricionais - Bife de Alcatra</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>230 kcal</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>25 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>15 g</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Corte bovino.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar/congelar.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-bife-alcatra" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-file-tilapia" aria-hidden="true">
+            <article class="card-informação" id="file-tilapia">
+                <h3><em>Informações Nutricionais - Filé de Tilápia</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>96 kcal</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>20 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>1.7 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>50 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Filé de peixe.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Manter congelado.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-file-tilapia" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-salsicha-hot-dog" aria-hidden="true">
+            <article class="card-informação" id="salsicha-hot-dog">
+                <h3><em>Informações Nutricionais - Salsicha Hot Dog</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>290 kcal</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>10 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>26 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>900 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Carne processada, condimentos, conservantes.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-salsicha-hot-dog" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-picanha-fatiada" aria-hidden="true">
+            <article class="card-informação" id="picanha-fatiada">
+                <h3><em>Informações Nutricionais - Picanha Fatiada</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>280 kcal</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>22 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>20 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>70 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Corte bovino.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Refrigerar/congelar.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-picanha-fatiada" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-pao-de-forma" aria-hidden="true">
+            <article class="card-informação" id="pao-de-forma">
+                <h3><em>Informações Nutricionais - Pão de Forma (por 50 g)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (50 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>130 kcal</td></tr>
+                    <tr><td><h4>Carboidratos</h4></td><td>24 g</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>4 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>1.5 g</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Farinha de trigo, água, fermento, sal, açúcar.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-pao-de-forma" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-bolo-chocolate" aria-hidden="true">
+            <article class="card-informação" id="bolo-chocolate">
+                <h3><em>Informações Nutricionais - Bolo de Chocolate (por 100 g)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>350 kcal</td></tr>
+                    <tr><td><h4>Açúcares</h4></td><td>24 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>18 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>50 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Farinha, açúcar, ovos, cacau, manteiga.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-bolo-chocolate" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-croissant" aria-hidden="true">
+            <article class="card-informação" id="croissant">
+                <h3><em>Informações Nutricionais - Croissant (por 60 g)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (60 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>260 kcal</td></tr>
+                    <tr><td><h4>Carboidratos</h4></td><td>28 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>14 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>70 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Manteiga, farinha, água, sal, fermento.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>1–2 dias.</dd>
+                </dl>
+                <label for="cardique-croissant" class="modal-ok">OK</label>
+            </article>
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-panetone-visconti" aria-hidden="true">
+            <article class="card-informação" id="panetone-visconti">
+                <h3><em>Informações Nutricionais - Panetone (por 100 g)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>350 kcal</td></tr>
+                    <tr><td><h4>Açúcares</h4></td><td>28 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>18 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>150 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Farinha, açúcar, ovos, frutas cristalizadas.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-panetone-visconti" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-pao-frances" aria-hidden="true">
+            <article class="card-informação" id="pao-frances">
+                <h3><em>Informações Nutricionais - Pão Francês (por 50 g)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (50 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>140 kcal</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>1.5 g</td></tr>
+                    <tr><td><h4>Carboidratos</h4></td><td>29 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>250 mg</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Farinha, água, fermento, sal.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>1 dia preferencial.</dd>
+                </dl>
+                <label for="cardique-pao-frances" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-baguete" aria-hidden="true">
+            <article class="card-informação" id="baguete">
+                <h3><em>Informações Nutricionais - Baguete (por 100 g)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>270 kcal</td></tr>
+                    <tr><td><h4>Carboidratos</h4></td><td>56 g</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>9 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>1.2 g</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Farinha, água, sal, fermento.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>1-2 dias.</dd>
+                </dl>
+                <label for="cardique-baguete" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-salgado-frango" aria-hidden="true">
+            <article class="card-informação" id="salgado-frango">
+                <h3><em>Informações - Salgado de Frango</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (unidade média)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>220 kcal (por unidade média)</td></tr>
+                    <tr><td><h4>Carboidratos</h4></td><td>30 g</td></tr>
+                    <tr><td><h4>Proteínas</h4></td><td>10 g</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>8 g</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Recheio de frango, massa.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-salgado-frango" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-torta-limao" aria-hidden="true">
+            <article class="card-informação" id="torta-limao">
+                <h3><em>Informações - Torta de Limão</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 g)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>320 kcal (porção 100 g)</td></tr>
+                    <tr><td><h4>Açúcares</h4></td><td>28 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>150 mg</td></tr>
+                    <tr><td><h4>Gorduras Totais</h4></td><td>18 g</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Limão, açúcar, farinha, ovos.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-torta-limao" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-coca-cola" aria-hidden="true">
+            <article class="card-informação" id="coca-cola">
+                <h3><em>Informações - Coca Cola 2L (por 100 ml)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 ml)</th></tr></thead>
+                    <tbody>
+                    <tr><td><h4>Energia</h4></td><td>42 kcal</td></tr>
+                    <tr><td><h4>Carboidratos</h4></td><td>10.6 g</td></tr>
+                    <tr><td><h4>Sódio</h4></td><td>0 mg</td></tr>
+                    <tr><td><h4>Açúcares</h4></td><td>10.6 g</td></tr>
+                </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Água gaseificada, açúcar, corantes, acidulantes, aromatizantes.</dd>
+                </dl>
+                <label for="cardique-coca-cola" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-suco-laranja" aria-hidden="true">
+            <article class="card-informação" id="suco-laranja">
+                <h3><em>Informações - Suco de Laranja (por 100 ml)</em></h3>
+                <table>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>45 kcal</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>8–10 g</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Suco de laranja (inteiro ou concentrado).</dd>
+                </dl>
+                <label for="cardique-suco-laranja" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-cerveja-skol" aria-hidden="true">
+            <article class="card-informação" id="cerveja-skol">
+                <h3><em>Informações - Cerveja Skol (por 100 ml)</em></h3>
+                <table>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>43 kcal</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Água, malte, lúpulo, levedura.</dd>
+                </dl>
+                <label for="cardique-cerveja-skol" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-cha-gelado" aria-hidden="true">
+            <article class="card-informação" id="cha-gelado">
+                <h3><em>Informações - Chá Gelado (por 100 ml)</em></h3>
+                <table>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>20–40 kcal</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Chá, açúcar, conservantes (se aplicável).</dd>
+                </dl>
+                <label for="cardique-cha-gelado" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-energetico-red-bull" aria-hidden="true">
+            <article class="card-informação" id="energetico-red-bull">
+                <h3><em>Informações - Energético Red Bull (por 100 ml)</em></h3>
+                <table>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>45 kcal</td></tr>
+                        <tr><td><h4>Cafeína</h4></td><td>32 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl><dt><u><h5>Aviso:</h5></u></dt><dd>Não recomendado para crianças, gestantes ou sensíveis à cafeína.</dd></dl>
+                <label for="cardique-energetico-red-bull" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-guarana" aria-hidden="true">
+            <article class="card-informação" id="guarana">
+                <h3><em>Informações - Guaraná 2L (por 100 ml)</em></h3>
+                <table>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>40 kcal</td></tr>
+                        <tr><td><h4>Açúcares</h4></td><td>10 g</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>—</dd>
+                </dl>
+                <label for="cardique-guarana" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-agua-coco" aria-hidden="true">
+            <article class="card-informação" id="agua-coco">
+                <h3><em>Informações - Água de Coco 1L (por 100 ml)</em></h3>
+                <table>
+                    <thead><tr><th>Componente</th><th>Porção (100 ml)</th></tr></thead>
+                    <tbody>
+                        <tr><td><h4>Energia</h4></td><td>19 kcal</td></tr>
+                        <tr><td><h4>Carboidratos</h4></td><td>3.7 g</td></tr>
+                        <tr><td><h4>Sódio</h4></td><td>25 mg</td></tr>
+                    </tbody>
+                </table>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Água de coco 100%.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Manter refrigerado após aberto.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-agua-coco" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-detergente-ype" aria-hidden="true">
+            <article class="card-informação" id="detergente-ype">
+                <h3><em>Informações - Detergente Ypê 500ml</em></h3>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Surfactantes aniônicos, solventes, corantes, fragrância.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Armazenar em local seco e arejado, fora do alcance de crianças.</dd>
+                    <dt><u><h5>Validade:</h5></u></dt><dd>Conforme embalagem.</dd>
+                </dl>
+                <label for="cardique-detergente-ype" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-agua-sanitario-qboa" aria-hidden="true">
+            <article class="card-informação" id="agua-sanitario-qboa">
+                <h3><em>Informações - Água Sanitária Qboa 1L</em></h3>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Hipoclorito de sódio em solução aquosa.</dd>
+                    <dt><u><h5>Aviso:</h5></u></dt><dd>Não misturar com ácidos. Uso doméstico.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Local fresco e ventilado; evitar contato com olhos e pele.</dd>
+                </dl>
+                <label for="cardique-agua-sanitario-qboa" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-sabao-omo" aria-hidden="true">
+            <article class="card-informação" id="sabao-omo">
+                <h3><em>Informações - Sabão em Pó Omo 1kg</em></h3>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Tensoativos aniônicos e não aniônicos, enzimas, fragrância.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Manter embalagem fechada e em local seco.</dd>
+                </dl>
+                <label for="cardique-sabao-omo" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-desinfetante-pinho-sol" aria-hidden="true">
+            <article class="card-informação" id="desinfetante-pinho-sol">
+                <h3><em>Informações - Desinfetante Pinho Sol 500ml</em></h3>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Agente desinfetante, solventes, fragrância.</dd>
+                    <dt><u><h5>Uso:</h5></u></dt><dd>Limpeza e desinfecção de superfícies. Evitar contato com alimentos.</dd>
+                </dl>
+                <label for="cardique-desinfetante-pinho-sol" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-limpador-veja" aria-hidden="true">
+            <article class="card-informação" id="limpador-veja">
+                <h3><em>Informações - Limpador Veja 500ml</em></h3>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Surfactantes, solventes e fragrâncias.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Local seco e ventilado; manter fora do alcance de crianças.</dd>
+                </dl>
+                <label for="cardique-limpador-veja" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-esponja-aco" aria-hidden="true">
+            <article class="card-informação" id="esponja-aco">
+                <h3><em>Informações - Esponja de Aço Assolan 5un</em></h3>
+                <dl>
+                    <dt><u><h5>Composição:</h5></u></dt><dd>Fios de aço inoxidável.</dd>
+                    <dt><u><h5>Uso:</h5></u></dt><dd>Limpeza de panelas e superfícies resistentes.</dd>
+                </dl>
+                <label for="cardique-esponja-aco" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-luva-limpeza" aria-hidden="true">
+            <article class="card-informação" id="luva-limpeza">
+                <h3><em>Informações - Luva de Limpeza (1 par)</em></h3>
+                <dl>
+                    <dt><u><h5>Composição:</h5></u></dt><dd>Borracha/elastômero.</dd>
+                    <dt><u><h5>Uso:</h5></u></dt><dd>Proteção das mãos durante limpeza.</dd>
+                    <dt><u><h5>Conservação:</h5></u></dt><dd>Secar após uso e guardar em local arejado.</dd>
+                </dl>
+                <label for="cardique-luva-limpeza" class="modal-ok">OK</label>
+            </article>
+
+            <input type="checkbox" class="cardique-modal-toggle" id="cardique-amaciante-downy" aria-hidden="true">
+            <article class="card-informação" id="amaciante-downy">
+                <h3><em>Informações - Amaciante Downy 2L</em></h3>
+                <dl>
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Agentes amaciantes, fragrâncias, conservantes.</dd>
+                    <dt><u><h5>Uso:</h5></u></dt><dd>Adicionar na máquina conforme instruções do fabricante.</dd>
+                </dl>
+                <label for="cardique-amaciante-downy" class="modal-ok">OK</label>
+            </article>
+
+        </section>
+
+    </main>
+</body>
+</html>
