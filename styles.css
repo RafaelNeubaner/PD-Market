@@ -825,3 +825,106 @@ input.cardique-modal-toggle {
 input.cardique-modal-toggle {
     display: none;
 }
+
+#sobre h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+#body-sobre {
+    padding: 2rem;
+    background-color: var(--fundo);
+    min-height: 80vh;
+}
+
+#sobre {
+    padding: 2rem;
+    background-color: var(--fundo);
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+#sobre h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-secundaria);
+    text-decoration: none;
+}
+
+#sobre p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--texto);
+    max-width: 600px;
+    margin: 0 auto;
+}  
+
+#sobre video {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+#sobre video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#sobre video:focus {
+    outline: 3px solid var(--cor-secundaria);
+}
+
+#sobre li {
+    list-style: none;
+    margin: 0.5rem 0;
+}
+
+#sobre #redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    list-style: none;
+}
+
+#sobre #redes li a {
+    text-decoration: none;
+    color: rgb(219, 161, 1);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+#sobre #redes li a:hover {
+    text-decoration: underline;
+    color: var(--cor-secundaria);
+}
+
+#sobre #depoimentos {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: rgb(255, 255, 183);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sobre blockquote {
+    width: 60%;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--texto);
+    border-bottom: 4px solid var(--cor-principal);
+    border-radius: 50px;
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
