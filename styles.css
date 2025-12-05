@@ -427,7 +427,6 @@ nav a:hover {
     display: none;
 }
 
-/* backdrop e posicionamento do modal */
 .cart-modal {
     position: fixed;
     inset: 0;
@@ -438,18 +437,17 @@ nav a:hover {
     opacity: 0;
     pointer-events: none;
     transition: opacity .25s ease, transform .25s ease;
-    z-index: 2;
+    z-index: 5;
     transform: scale(.98);
 }
 
-/* quando o checkbox estiver marcado, mostrar modal */
+
 #cart-modal-toggle:checked~.cart-modal {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
 }
 
-/* caixa interna do modal */
 .cart-modal__box {
     background: #fff;
     color: var(--texto);
@@ -464,14 +462,12 @@ nav a:hover {
     text-align: center;
 }
 
-/* ícone */
 .cart-modal__icon svg {
     width: 36px;
     height: 36px;
     color: var(--cor-principal);
 }
 
-/* botão OK (label) */
 .modal-ok {
     margin-top: 8px;
     background: var(--cor-principal);
