@@ -503,6 +503,17 @@ nav a:hover {
     color: var(--texto);
 }
 
+#ofertas {
+    text-align: center;
+    background-color: var(--fundo);
+}
+
+#ofertas h2 {
+    color: var(--cor-principal);
+    text-decoration: underline;
+    margin-bottom: 1rem;
+}
+
 #mercado {
     padding: 2rem;
     background-color: var(--fundo);
