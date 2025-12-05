@@ -1018,3 +1018,17 @@ input.cardique-modal-toggle {
 #contato button:active {
     transform: scale(0.98);
 }
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-principal);
+    color: var(--fundo);
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--fundo);
+    text-decoration: underline;
+    font-weight: bold;
+}
