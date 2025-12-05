@@ -348,6 +348,10 @@ nav a:hover {
     padding-bottom: 0;
 }
 
+.card-produtos figure {
+    cursor: pointer;
+}
+
 .card-produtos .tag-promocional {
     position: absolute;
     width: min-content;
@@ -738,7 +742,7 @@ input[type=range]::-moz-range-thumb {
     display: none;
 }
 
-#mercado .card-produtos:hover{
+.card-produtos:hover{
     transform: scale(1.05);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -789,7 +793,13 @@ input.cardique-modal-toggle:checked + .card-informação {
     transform: scale(1);
 }
 
-
+#informações-produtos h3 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
 
 #informações-produtos caption {
     color: var(--cor-principal);
