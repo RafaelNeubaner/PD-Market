@@ -116,16 +116,16 @@
                 <form>
                     <label for="preco-minimo">Preço Mínimo:</label>
                     <input type="range" id="preco-minimo" name="preco-minimo" min="1" max="100" value="0" class="slider">
-                    <output for="preco-minimo" id="out">R$1.00</output>
+                    <output for="preco-minimo" id="out">R$1.00</output> <!-- descrição devalor mínimo para o input -->
                     <br>
                     <label for="preco-maximo">Preço Máximo:</label>
                     <input type="range" id="preco-maximo" name="preco-maximo" min="1" max="100" value="100" class="slider">
-                    <span id="valor-maximo">R$100.00</span>
+                    <span id="valor-maximo">R$100.00</span> <!-- descrição de valor máximo para o input -->
                     <br>
                     <label for="categoria">Categoria:</label>
-                    <select id="categoria" name="categoria">
-                        <optgroup label="Categorias">
-                            <option value="">Todas</option>
+                    <select id="categoria" name="categoria"> <!-- menu suspenso para seleção de categoria -->
+                        <optgroup label="Categorias"> <!-- agrupamento de opções dentro do select -->
+                            <option value="">Todas</option> <!-- opção para selecionar todas as categorias -->
                             <option value="frutas-vegetais">Frutas e Vegetais</option>
                             <option value="aves-carnes">Aves e Carnes</option>
                             <option value="padaria">Padaria</option>
@@ -136,12 +136,12 @@
                     <br>
                     <p id="p-marca"><b>Marca:</b></p>
                     <input type="text" list="sugestoes-produtos" id="input-marca">
-                    <datalist id="sugestoes-produtos">
+                    <datalist id="sugestoes-produtos"> <!-- sugestões de marcas para o input de marca -->
                         <option value="Visconti">
                         <option value="Coca-Cola">
                     </datalist>
                     <br>
-                    <button type="submit">Aplicar Filtros</button>
+                    <button type="submit">Aplicar Filtros</button> <!-- botão para aplicar os filtros selecionados -->
             </details>
         </section>
 
@@ -173,7 +173,7 @@
             <div class="body-categoria">
                 <article class="card-produtos">
                     <h3>Banana Prata</h3>
-                    <label for="cardique-banana-prata">
+                    <label for="cardique-banana-prata"> <!-- objeto dop checkbox para gerar os cards interativos -->
                     <figure>
                         <p class="tag-promocional"><strong>OFERTA</strong></p>
                         <img src="assets/banana-prata.jpg" alt="Banana Prata">
@@ -782,10 +782,10 @@
 
             <input type="checkbox" class="cardique-modal-toggle" id="cardique-banana-prata" aria-hidden="true">
             <article class="card-informação" id="banana-prata">
-                <h3><em>Informações Nutricionais - Banana Prata</em></h3>
-                <table>
-                    <thead><tr><th>Componente</th><th>Quantidade por porção (100 g)</th></tr></thead>
-                    <tbody>
+                <h3><em>Informações Nutricionais - Banana Prata</em></h3> <!-- título da seção de informações nutricionais -->
+                <table> <!-- tabela de informações nutricionais -->
+                    <thead><tr><th>Componente</th><th>Quantidade por porção (100 g)</th></tr></thead> <!-- cabeçalho da tabela -->
+                    <tbody> <!-- corpo da tabela -->
                         <tr><td><h4>Porção</h4></td><td>100 g</td></tr>
                         <tr><td><h4>Energia</h4></td><td>89 kcal</td></tr>
                         <tr><td><h4>Carboidratos</h4></td><td>23 g</td></tr>
@@ -796,10 +796,10 @@
                         <tr><td><h4>Fibras</h4></td><td>2.6 g</td></tr>
                         <tr><td><h4>Sódio</h4></td><td>1 mg</td></tr>
                     </tbody>
-                    <tfoot><tr><td colspan="2" id="msg"><small><u><i>Informações nutricionais estimadas — PD Market</i></u></small></td></tr></tfoot>
+                    <tfoot><tr><td colspan="2" id="msg"><small><u><i>Informações nutricionais estimadas — PD Market</i></u></small></td></tr></tfoot> <!-- rodapé da tabela -->
                 </table>
-                <dl>
-                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Banana prata fresca (100%).</dd>
+                <dl> <!-- lista de definições -->
+                    <dt><u><h5>Ingredientes:</h5></u></dt><dd>Banana prata fresca (100%).</dd> <!-- definição de ingredientes dando emfase visual nas categortias -->
                     <dt><u><h5>Conservação:</h5></u></dt><dd>Armazenar em local fresco e arejado; evitar sol direto. Refrigerar se cortada.</dd>
                     <dt><u><h5>Validade:</h5></u></dt><dd>Consumir preferencialmente em até 5 dias após a compra.</dd>
                 </dl>

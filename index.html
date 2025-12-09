@@ -1,39 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<!DOCTYPE html> <!-- define o documento como html5 -->
+<html lang="pt-BR"> <!-- define o idioma como português do Brasil -->
+<head> <!-- cabeçalho do documento onde sero definidos os metadados e titulo -->
+    <meta charset="UTF-8"> <!-- define a codificação de caracteres como UTF-8 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/logo.png">
-    <title>PD Market | Home</title>
+    <link rel="stylesheet" href="styles.css"> <!-- link para o arquivo de estilos CSS -->
+    <link rel="icon" href="assets/logo.png"> <!-- define o ícone da aba do navegador -->
+    <title>PD Market | Home</title> <!-- define o título da página -->
 </head>
-<body>
-    <header>
-        <a href="index.html" id="alogo"><img src="assets/logo.png" alt="Logo da PD Market" id="logo"></a>
+<body> <!-- corpo do documento onde o conteúdo visível é inserido -->
+    <header> <!-- cabeçalho da página -->
+        <a href="index.html" id="alogo"><img src="assets/logo.png" alt="Logo da PD Market" id="logo"></a> <!-- link para a página inicial com a logo -->
         
-        <form class="search-container" role="search">
+        <form class="search-container" role="search"> <!-- formulário de busca -->
         
-            <input type="checkbox" id="search-trigger" class="search-checkbox">
+            <input type="checkbox" id="search-trigger" class="search-checkbox"> <!-- checkbox para ativar/desativar a busca -->
         
-            <label for="search-trigger" class="search-icon">
+            <label for="search-trigger" class="search-icon"> <!-- rótulo para o checkbox com ícone de busca -->
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" style="width: 45px; height: 45px;">
+                    stroke="currentColor" style="width: 45px; height: 45px;"> <!-- ícone de lupa para busca -->
                     <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />  
                 </svg>
-            </label>
+            </label> 
         
             <input type="search" class="search-input" placeholder="Buscar produto...">
         </form>
 
-        <details open>
-            <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+        <details open> <!-- menu de navegação expansivel -->
+            <summary> <!-- icone do menu -->    
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" style="width: 50px; height: 50px;">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </summary>
-            <nav>
-                <ul>
+            <nav> <!-- navbar principal -->
+                <ul> <!-- lista de links de navegação -->
                     <li><a href="index.html">Home</a></li>
                     <li><a href="mercado.html">Comprar</a></li>
                     <li><a href="sobre.html">Sobre nós</a></li>
@@ -54,9 +55,8 @@
         
     </header>
 
-    <main>
-        <!-- adiciona carrossel sem JS -->
-        <section class="carrossel-wrap">
+    <main> <!-- conteudo principal da pagina -->
+        <section class="carrossel-wrap"> <!-- secao do carrossel de imagens -->
             <input type="radio" name="carrossel" id="r1" class="carrossel-radio">
             <input type="radio" name="carrossel" id="r2" class="carrossel-radio">
             <input type="radio" name="carrossel" id="r3" class="carrossel-radio">
@@ -102,19 +102,19 @@
             </div>
             <section id="limpeza">
                 <header class="head-categoria">
-                    <h2>Limpeza</h2>
+                    <h2>Limpeza</h2> <!-- titulo secundario de cada seçao-->
                     <a href="mercado.html">ver todos</a>
                 </header>
         
                 <div class="body-categoria">
-                    <article class="card-produtos">
-                        <h3>Detergente Ypê</h3>
-                        <figure>
-                            <p class="tag-promocional"><strong>OFERTA</strong></p>
-                            <img src="assets/detergente-ype.jpg" alt="Detergente Ypê 500ml">
-                            <figcaption>Detergente Ypê 500ml</figcaption>
+                    <article class="card-produtos"> <!-- card de cada produto -->
+                        <h3>Detergente Ypê</h3> <!-- nome do produto -->
+                        <figure> <!-- figura de composiçaõ do produto -->
+                            <p class="tag-promocional"><strong>OFERTA</strong></p> 
+                            <img src="assets/detergente-ype.jpg" alt="Detergente Ypê 500ml"> <!-- imagem do produto -->
+                            <figcaption>Detergente Ypê 500ml</figcaption> <!-- legenda da imagem -->
                         </figure>
-                        <footer class="product-info">
+                        <footer class="product-info"> <!-- informaçoes sobre compra do produto -->
                             <p class="preço-antigo">R$ 4,99</p>
                             <p class="preço">R$ 2,99</p>
                             <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho</label>
@@ -280,7 +280,7 @@
         <picture style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem;">
             <source srcset="assets/logo.png" type="image/png">
             <img src="assets/logo.png" alt="logo da PD Market">
-        </picture>
+        </picture> <!-- logo da PD Market -->
 
     </main>
 
@@ -289,14 +289,14 @@
 
 <footer class="footer">
     <section id="metas">
-        <aside>
-            <h5>Meta de Vendas do Mês</h5>
+        <aside> <!-- aba a parte para se referir as metas de vendas -->
+            <h5>Meta de Vendas do Mês</h5> <!-- título da subseção -->
             <label for="vendas" style="font-weight: bold; font-size: small;">Arrecadação:</label>
-            <progress id="vendas" value="77" max="100">77%</progress>
+            <progress id="vendas" value="77" max="100">77%</progress> <!-- barra de progresso das metas -->
         </aside>
     </section>
     <h6>&copy; 2024 PD Market. Todos os direitos reservados.</h6>
-    <address>
+    <address> <!-- informações de contato -->
         Contato: <a href="mailto:contato@pdmarket.com">contato@pdmarket.com</a> | <a href="tel:31999999999">Telefone:
             (31) 99999-9999</a>
     </address>
