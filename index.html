@@ -3,9 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>PD Market</title>
 </head>
 <body>
-    
+    <header>
+        <a href="index.html" id="alogo"><img src="assets/logo.png" alt="Logo da PD Market" id="logo"></a>
+        
+        <form class="search-container" role="search">
+        
+            <input type="checkbox" id="search-trigger" class="search-checkbox">
+        
+            <label for="search-trigger" class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 45px; height: 45px;">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </label>
+        
+            <input type="search" class="search-input" placeholder="Buscar produto...">
+        </form>
+
+        <details open>
+            <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 50px; height: 50px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </summary>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mercado.html">Comprar</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </details>
+
+        <a href="#" class="carrinho-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+        
+            <span class="badge">3</span>
+        </a>
+        
+    </header>
+
+    <main>
+
+        <h1 style="text-align: center; color: var(--cor-principal); text-decoration: underline;">Bem-vindo à PD Market!</h1>
+
+        <section class="carrossel-wrap">
+            <input type="radio" name="carrossel" id="r1" class="carrossel-radio">
+            <input type="radio" name="carrossel" id="r2" class="carrossel-radio">
+            <input type="radio" name="carrossel" id="r3" class="carrossel-radio">
+            <input type="radio" name="carrossel" id="r4" class="carrossel-radio">
+            <input type="radio" name="carrossel" id="r5" class="carrossel-radio">
+
+            <div class="carrossel">
+                <div class="slides_dots">
+                    <div class="slides_autoplay">
+                        <img src="assets/slide1.jpg" alt="Slide 1">
+                        <img src="assets/slide2.jpg" alt="Slide 2">
+                        <img src="assets/slide3.jpg" alt="Slide 3">
+                        <img src="assets/slide4.jpg" alt="Slide 4">
+                        <img src="assets/slide5.jpg" alt="Slide 5">
+                    </div>
+                </div>
+            </div>
+
+            <div class="dots">
+                <label for="r1" class="dot" aria-label="Ir para slide 1"></label>
+                <label for="r2" class="dot" aria-label="Ir para slide 2"></label>
+                <label for="r3" class="dot" aria-label="Ir para slide 3"></label>
+                <label for="r4" class="dot" aria-label="Ir para slide 4"></label>
+                <label for="r5" class="dot" aria-label="Ir para slide 5"></label>
+            </div>
+        </section>
+    </main>
+
 </body>
 </html>
