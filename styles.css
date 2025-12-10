@@ -853,7 +853,6 @@ input.cardique-modal-toggle {
 }
 
 #body-sobre {
-    padding: 2rem;
     background-color: var(--fundo);
     min-height: 80vh;
 }
@@ -954,6 +953,13 @@ input.cardique-modal-toggle {
     cursor: pointer;
 }
 
+#sobre canvas {
+    background-image: url("assets/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 #contato {
     padding: 2rem;
     background-color: var(--fundo);
@@ -1036,4 +1042,18 @@ input.cardique-modal-toggle {
 
 #contato button:active {
     transform: scale(0.98);
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--cor-principal);
+    color: var(--fundo);
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: var(--fundo);
+    text-decoration: underline;
+    font-weight: bold;
 }

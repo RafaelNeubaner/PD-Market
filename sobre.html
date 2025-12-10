@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>PD Market</title>
+    <link rel="icon" href="assets/logo.png">
+    <title>PD Market | Sobre Nós</title>
 </head>
 
 <body id="body-sobre">
@@ -28,7 +29,8 @@
         </form>
 
         <details open>
-            <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            <summary>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" style="width: 50px; height: 50px;">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
@@ -60,9 +62,9 @@
             <h2>Nossa História</h2>
             <p>A PD Market foi fundada em <time datetime="2020-01-01">2020</time> com a missão de oferecer produtos de qualidade a preços acessíveis.
                 Desde então, temos crescido e nos adaptado às necessidades dos nossos clientes.</p>
-                <video controls>
-                    <source src="assets/video.mp4" type="video/mp4">
-                    <track src="assets/captions.vtt" kind="captions" srclang="pt" label="Português">
+                <video controls> <!-- vídeo institucional da empresa -->
+                    <source src="assets/video.mp4" type="video/mp4"> <!-- fonte do vídeo -->
+                    <track src="assets/captions.vtt" kind="captions" srclang="pt" label="Português"> <!-- legenda do vidoe -->
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
 
@@ -70,6 +72,7 @@
         <section>
             <h2>Nossos Valores</h2>
             <ul>
+                <!-- lista dos valores da empresa com negrito nos valores-->
                 <li><b>Qualidade:</b> Selecionamos cuidadosamente cada produto que oferecemos.</li>
                 <li><b>Atendimento:</b> Nosso foco é proporcionar uma experiência de compra agradável.</li>
                 <li><b>Sustentabilidade:</b> Estamos comprometidos com práticas que respeitam o meio ambiente.</li>
@@ -95,14 +98,34 @@
         </section>
         <section id="depoimentos">
             <h2>Depoimentos de Clientes</h2>
-            <blockquote>
-                <q>A PD Market é minha loja favorita! Sempre encontro tudo o que preciso com ótimos preços.</q>
-                <cite>- Matheus L.</cite>
+            <blockquote> <!-- citar e englobar um depoimento -->
+                <q>A PD Market é minha loja favorita! Sempre encontro tudo o que preciso com ótimos preços.</q> <!-- indica a fala do cliente -->
+                <cite>- Matheus L.</cite> <!-- indica o autor da fala -->
             </blockquote>
             <blockquote>
                 <q>Adoro a variedade de produtos e o atendimento é excelente!</q>
                 <cite>- Thiago M.</cite>
             </blockquote>
         </section>
+        <br> <!-- espaçamento visual -->
+        <br>
+        <canvas width="400" height="200" role="img" aria-label="Ilustração estática"> <!-- área de desenho gráfico -->
+            <img src="assets/logo.png" alt="Ilustração estática do PD Market">
+            <p>Seu navegador não suporta canvas — imagem alternativa exibida.</p>
+        </canvas>
+
     </main>
+
+    
+    
 </body>
+
+<footer class="footer">
+    <h6>&copy; 2024 PD Market. Todos os direitos reservados.</h6>
+    <address>
+        Contato: <a href="mailto:contato@pdmarket.com">contato@pdmarket.com</a> | <a href="tel:31999999999">Telefone:
+            (31) 99999-9999</a>
+    </address>
+</footer>
+
+</html>
