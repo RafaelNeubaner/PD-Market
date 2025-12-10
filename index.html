@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="styles.css"> <!-- link para o arquivo de estilos CSS -->
     <link rel="icon" href="assets/logo.png"> <!-- define o ícone da aba do navegador -->
     <title>PD Market | Home</title> <!-- define o título da página -->
+    <base href="./" target="_self"> <!-- define o diretório base para links relativos -->
 </head>
 <body> <!-- corpo do documento onde o conteúdo visível é inserido -->
     <header> <!-- cabeçalho da página -->
-        <a href="index.html" id="alogo"><img src="assets/logo.png" alt="Logo da PD Market" id="logo"></a> <!-- link para a página inicial com a logo -->
+        <img src="assets/logo.png" usemap="#logo-map" alt="Logo da PD Market" id="logo"> <!-- link para a página inicial com a logo -->
+        <map name="logo-map">
+            <area shape="rect" coords="0,0,100,100" href="index.html" alt="Home">
+        </map>
         
         <form class="search-container" role="search"> <!-- formulário de busca -->
         
@@ -289,6 +293,11 @@
 
         </section>
 
+        <script>
+            alert("Seja bem-vindo ao PD Market!");
+        </script>
+
+        
         <picture style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem;">
             <source srcset="assets/logo.png" type="image/png">
             <img src="assets/logo.png" alt="logo da PD Market">
