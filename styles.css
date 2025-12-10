@@ -348,19 +348,29 @@ nav a:hover {
     padding-bottom: 0;
 }
 
+.card-produtos figure {
+    cursor: pointer;
+}
+
 .card-produtos .tag-promocional {
     position: absolute;
+    width: min-content;
         top: 70px;
         left: 140px;
-        background: #e53935;
         color: #fff;
-        padding: 4px 8px;
         font-size: 0.85rem;
         font-weight: 700;
         border-radius: 4px;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
         z-index: 2;
         white-space: nowrap;
+}
+
+.card-produtos .tag-promocional mark {
+    background-color: var(--cor-secundaria);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    color: white;
 }
 
 .card-produtos img {
@@ -421,7 +431,6 @@ nav a:hover {
     display: none;
 }
 
-/* backdrop e posicionamento do modal */
 .cart-modal {
     position: fixed;
     inset: 0;
@@ -432,18 +441,17 @@ nav a:hover {
     opacity: 0;
     pointer-events: none;
     transition: opacity .25s ease, transform .25s ease;
-    z-index: 2;
+    z-index: 5;
     transform: scale(.98);
 }
 
-/* quando o checkbox estiver marcado, mostrar modal */
+
 #cart-modal-toggle:checked~.cart-modal {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
 }
 
-/* caixa interna do modal */
 .cart-modal__box {
     background: #fff;
     color: var(--texto);
@@ -458,14 +466,12 @@ nav a:hover {
     text-align: center;
 }
 
-/* ícone */
 .cart-modal__icon svg {
     width: 36px;
     height: 36px;
     color: var(--cor-principal);
 }
 
-/* botão OK (label) */
 .modal-ok {
     margin-top: 8px;
     background: var(--cor-principal);
@@ -499,6 +505,17 @@ nav a:hover {
 .modal-ok:hover {
     background: var(--cor-secundaria);
     color: var(--texto);
+}
+
+#ofertas {
+    text-align: center;
+    background-color: var(--fundo);
+}
+
+#ofertas h2 {
+    color: var(--cor-principal);
+    text-decoration: underline;
+    margin-bottom: 1rem;
 }
 
 #mercado {
@@ -725,7 +742,7 @@ input[type=range]::-moz-range-thumb {
     display: none;
 }
 
-#mercado .card-produtos:hover{
+.card-produtos:hover{
     transform: scale(1.05);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -765,7 +782,7 @@ input[type=range]::-moz-range-thumb {
     margin: auto;
     pointer-events: none;
     max-width: 900px;
-    max-height: 85vh;
+    max-height: 75vh;
     overflow: auto;
     padding-bottom: 2.5rem;
 }
@@ -776,13 +793,15 @@ input.cardique-modal-toggle:checked + .card-informação {
     transform: scale(1);
 }
 
-/* inputs escondidos (continua) */
-input.cardique-modal-toggle {
-    display: none;
-}
-
 #informações-produtos h3 {
     width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+#informações-produtos caption {
     color: var(--cor-principal);
     text-decoration: underline;
     margin-bottom: 1rem;
