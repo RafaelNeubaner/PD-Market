@@ -167,8 +167,8 @@ nav a:hover {
 
 .carrossel-wrap {
     width: 100%;
-    max-width: 500px;
-    height: 300px;
+    max-width: 700px;
+    height: 450px;
     margin: 2rem auto;
     position: relative;
     padding: 0 1rem;
@@ -507,12 +507,25 @@ nav a:hover {
     color: var(--texto);
 }
 
+#preview-produtos a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: bold;
+}
+
+#preview-produtos a:hover {
+    text-decoration: underline;
+    color: var(--cor-principal)
+}
+
 #ofertas {
     text-align: center;
+    padding: 2rem;
     background-color: var(--fundo);
 }
 
 #ofertas h2 {
+    text-align: center;
     color: var(--cor-principal);
     text-decoration: underline;
     margin-bottom: 1rem;
