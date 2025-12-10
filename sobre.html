@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>PD Market</title>
+</head>
+
+<body id="body-sobre">
+    <header>
+        <a href="index.html" id="alogo"><img src="assets/logo.png" alt="Logo da PD Market" id="logo"></a>
+
+        <form class="search-container" role="search">
+
+            <input type="checkbox" id="search-trigger" class="search-checkbox">
+
+            <label for="search-trigger" class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 45px; height: 45px;">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </label>
+
+            <input type="search" class="search-input" placeholder="Buscar produto...">
+        </form>
+
+        <details open>
+            <summary><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" style="width: 50px; height: 50px;">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </summary>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mercado.html">Comprar</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </details>
+
+        <a href="#" class="carrinho-container">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="icon-cart">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+            </svg>
+
+            <span class="badge">0</span>
+        </a>
+
+    </header>
+    <main id="sobre">
+        <h1>Sobre Nós</h1>
+        <section>
+            <h2>Nossa História</h2>
+            <p>A PD Market foi fundada em 2020 com a missão de oferecer produtos de qualidade a preços acessíveis.
+                Desde então, temos crescido e nos adaptado às necessidades dos nossos clientes.</p>
+                <video controls>
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+
+        </section>
+        <section>
+            <h2>Nossos Valores</h2>
+            <ul>
+                <li><b>Qualidade:</b> Selecionamos cuidadosamente cada produto que oferecemos.</li>
+                <li><b>Atendimento:</b> Nosso foco é proporcionar uma experiência de compra agradável.</li>
+                <li><b>Sustentabilidade:</b> Estamos comprometidos com práticas que respeitam o meio ambiente.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contato</h2>
+            <p>Se você tiver alguma dúvida ou sugestão, não hesite em nos contatar através do nosso
+                <a href="contato.html">formulário de contato</a>.</p>
+        </section>
+        <section>
+            <h2>Onde nos encontrar</h2>
+            <p>Estamos localizados na <address>Alameda Oscar Niemeyer, 891 - Vila da Serra, Nova Lima - MG</address>. Venha nos visitar!</p>
+            <map name="localização">
+                <area shape="rect" coords="34,44,270,350" alt="PD Case Informática" href="https://maps.app.goo.gl/ZxmqFi1cnNCmjyej6"
+                    target="_blank">
+                <iframe id="store-locator"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4447.911881171375!2d-43.94500212401326!3d-19.978204839812857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697ff7aba62c9%3A0x26a43f520c774e7!2sPD%20Case%20Inform%C3%A1tica!5e1!3m2!1spt-BR!2sbr!4v1763477677121!5m2!1spt-BR!2sbr"
+                    width="300" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </map>
+        </section>
+        <section>
+            <h2>Nossas Redes Sociais</h2>
+            <p>Siga-nos nas redes sociais para ficar por dentro das novidades e promoções:</p>
+            <ul id="redes">
+                <li><a href="https://www.facebook.com/pdmarket">Facebook</a></li>
+                <li><a href="https://www.instagram.com/pdmarket">Instagram</a></li>
+                <li><a href="https://www.twitter.com/pdmarket">Twitter</a></li>
+            </ul>
+        </section>
+        <section id="depoimentos">
+            <h2>Depoimentos de Clientes</h2>
+            <blockquote>
+                <q>A PD Market é minha loja favorita! Sempre encontro tudo o que preciso com ótimos preços.</q>
+                <footer>- Matheus L.</footer>
+            </blockquote>
+            <blockquote>
+                <q>Adoro a variedade de produtos e o atendimento é excelente!</q>
+                <footer>- Thiago M.</footer>
+            </blockquote>
+        </section>
+    </main>
+</body>
