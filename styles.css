@@ -947,3 +947,93 @@ input.cardique-modal-toggle {
     padding-left: 1rem;
     margin: 1rem 0;
 }
+
+#sobre blockquote:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#contato {
+    padding: 2rem;
+    background-color: var(--fundo);
+    min-height: 80vh;
+}
+
+#contato h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+#contato section {
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--suporte);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+#contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contato fieldset {
+    border: var(--cor-secundaria) 1px solid;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contato legend {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+#contato label {
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#contato input, #contato textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--fundo);
+}
+
+#contato input:focus, #contato textarea:focus {
+    border-color: var(--cor-secundaria);
+    box-shadow: 0 0 5px rgba(244, 81, 30, 0.5);
+}
+
+#contato input:hover, #contato textarea:hover {
+    border-color: var(--cor-principal);
+}
+
+#contato button {
+    padding: 0.7rem 1.2rem;
+    background-color: var(--cor-principal);
+    color: var(--texto);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#contato button:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--fundo);
+}
+
+#contato button:active {
+    transform: scale(0.98);
+}
