@@ -123,7 +123,7 @@
                     <span id="valor-maximo">R$100.00</span> <br>
                     <label for="categoria">Categoria:</label>
                     <select id="categoria" name="categoria">
-                        <optgroup label="Categorias">
+                        <optgroup label="Categorias"> <!-- grupo de opções ded categroias -->
                             <option value="">Todas</option>
                             <option value="frutas-vegetais">Frutas e Vegetais</option>
                             <option value="aves-carnes">Aves e Carnes</option>
@@ -132,16 +132,18 @@
                             <option value="limpeza">Limpeza</option>
                         </optgroup>
                     </select>
-                    <br>
+                    <br> <!-- quebra de linha estetica -->
                     <p id="p-marca"><b>Marca:</b></p>
                     <input type="text" list="sugestoes-produtos" id="input-marca">
-                    <datalist id="sugestoes-produtos">
-                        <option value="Visconti">
-                        <option value="Coca-Cola">
+                    <datalist id="sugestoes-produtos"> <!-- sugestões de marcas-->
+                        <option value="Visconti"></option>
+                        <option value="Coca-Cola"></option>
                     </datalist>
                     <br>
                     <button type="submit">Aplicar Filtros</button>
+                </form>
             </details>
+
         </section>
 
         <section id="produtos">
@@ -185,11 +187,11 @@
                         <footer class="product-info">
                             <label for="meter-banana" style="font-size: small;">Estoque:</label>
                             <meter id="meter-banana" min="0" max="100" value="85" low="30" high="70"
-                                optimum="80">85%</meter>
+                                optimum="80">85%</meter> <!-- indicador visual do estoque -->
                             <p class="preço-antigo">R$ 4,99</p>
                             <p class="preço">R$ 2,99</p>
                             <label for="cart-modal-toggle" class="addcarrinho">Adicionar ao carrinho
-                                <audio src="assets/add-cart.mp3" autoplay preload="auto"></audio>
+                                <audio src="assets/add-cart.mp3" autoplay preload="auto"></audio> <!-- audio que toca quando adiciona algo ao carrinho-->
                                 <audio src="assets/add-cart.mp3" autoplay preload="auto" playsinline></audio></label>
                         </footer>
                     </article>
@@ -952,17 +954,17 @@
                 <input type="checkbox" class="cardique-modal-toggle" id="cardique-banana-prata" aria-hidden="true"
                     style="display: none;">
                 <article class="card-informação" id="banana-prata">
-                    <table>
-                        <caption><em>Informações Nutricionais - Banana Prata</em></caption>
-                        <thead>
-                            <tr>
-                                <th>Componente</th>
+                    <table> <!-- tabela de infomrçoes nutricionais-->
+                        <caption><em>Informações Nutricionais - Banana Prata</em></caption> <!-- titulo da tabela-->
+                        <thead> <!-- cabeçalho da tabela-->
+                            <tr> <!-- linha do cabeçalho-->
+                                <th>Componente</th> <!-- coluna do cabeçalho-->
                                 <th>Quantidade por porção (100 g)</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>
+                        <tbody> <!-- corpo da tabela-->
+                            <tr> <!-- linha da tabela-->
+                                <td> <!-- coluna da tabela-->
                                     <h4>Porção</h4>
                                 </td>
                                 <td>100 g</td>
@@ -1016,18 +1018,18 @@
                                 <td>1 mg</td>
                             </tr>
                         </tbody>
-                        <tfoot>
+                        <tfoot> <!-- rodapé da tabela-->
                             <tr>
                                 <td colspan="2" id="msg"><small><u><i>Informações nutricionais estimadas — PD
                                                 Market</i></u></small></td>
                             </tr>
                         </tfoot>
                     </table>
-                    <dl>
-                        <dt><u>
+                    <dl> <!-- lista de definições para indicar os ingrediente e composição dos produtos-->
+                        <dt><u> <!-- título da definição -->
                                 <h5>Ingredientes:</h5>
                             </u></dt>
-                        <dd>Banana prata fresca (100%).</dd>
+                        <dd>Banana prata fresca (100%).</dd> <!-- descrição da definição-->
                         <dt><u>
                                 <h5>Conservação:</h5>
                             </u></dt>
@@ -2188,7 +2190,7 @@
                         <dd>Farinha, açúcar, ovos, frutas cristalizadas.</dd>
                         <dt><u>
                                 <h5>Validade:</h5>
-                        </dt>
+                        </u></dt>
                         <dd>Conforme embalagem.</dd>
                     </dl>
                     <label for="cardique-panetone-visconti" class="modal-ok">OK</label>
@@ -2763,9 +2765,7 @@
                 <article class="card-informação" id="amaciante-downy">
                     <h3><em>Informações - Amaciante Downy 2L</em></h3>
                     <dl>
-                        <dt><u>
-                                <h5>Ingredientes:</h5>
-                            </u></dt>
+                        <dt><u><h5>Ingredientes:</h5></u></dt>
                         <dd>Agentes amaciantes, fragrâncias, conservantes.</dd>
                         <dt><u>
                                 <h5>Uso:</h5>
@@ -2775,7 +2775,7 @@
                     <label for="cardique-amaciante-downy" class="modal-ok">OK</label>
                 </article>
             </section>
-
+        </section>
     </main>
 </body>
 
