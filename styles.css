@@ -1,10 +1,12 @@
 :root {
     --cor-principal: #FB8C00;
     --cor-secundaria: #F4511E;
+    --cor-secundaria-hover: #c52e00;
     --fundo: #FFF8E1;
     --texto: #4E342E;
     --suporte: #FFECB3;
 }
+:root
 
 * {
     margin: 0;
@@ -38,24 +40,10 @@ header img {
     margin: 0;
 }
 
-header details {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-header details summary {
-    font-size: 1.3rem;
-    font-weight: bold;
-    list-style: none;
-    transform: rotate(0deg);
-    transition: transform 0.5s ease-in-out, background-color 0.3s, border 0.3s;
-    cursor: pointer;
-    pointer-events: none;
-}
 nav {
     display: flex;
     align-items: center;
+    gap: 8px;
 
 }
 
@@ -71,8 +59,8 @@ nav li {
 nav a {
     color: var(--texto);
     text-decoration: none;
-    margin: 0 10px;
-    padding: 20px;
+    margin: 0 10px!important;
+    padding: 20px !important;
     font-weight: bold;
 }
 
@@ -641,6 +629,7 @@ nav a:hover {
 
 .slider {
     -webkit-appearance: none;
+    appearance: none;
     width: 300px;
     height: 6px;
     background: #ddd;
