@@ -303,9 +303,15 @@ document.addEventListener("DOMContentLoaded", () => {
 function modalToggle() {
     const modal = document.querySelector('.cart-modal');
     if (modal) {
-        if (modal.style.display === 'flex') {
+        const aberto = !modal.hasAttribute('hidden') && modal.style.display === 'flex';
+
+        if (aberto) {
             modal.style.display = 'none';
+            modal.setAttribute('aria-hidden', 'true');
+            modal.setAttribute('hidden', '');
         } else {
+            modal.removeAttribute('hidden');
+            modal.setAttribute('aria-hidden', 'false');
             modal.style.display = 'flex';
         }
     }

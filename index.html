@@ -82,6 +82,9 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
+          width="50"
+          height="50"
+          style="color: #4e342e"
           class="icon-cart"
         >
           <path
@@ -140,6 +143,8 @@
           role="dialog"
           aria-modal="true"
           aria-labelledby="cart-modal-title"
+          aria-hidden="true"
+          hidden
         >
           <div class="cart-modal__box">
             <div class="cart-modal__icon" aria-hidden="true">
@@ -159,8 +164,7 @@
             </div>
             <div id="cart-modal-title">Item adicionado ao carrinho</div>
             <button class="modal-ok" onclick="modalToggle()">OK</button>
-            <div class="cart-modal__actions">
-            </div>
+            <div class="cart-modal__actions"></div>
           </div>
         </div>
         <section id="limpeza">
