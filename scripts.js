@@ -100,6 +100,55 @@ window.PDMarketCart = {
 document.addEventListener("DOMContentLoaded", () => {
     atualizarBadgeGlobal();
 
+    const infoModais = Array.from(document.querySelectorAll("#informações-produtos .card-informação"));
+    const gatilhosInfo = Array.from(document.querySelectorAll("[data-modal-target]"));
+    const botoesFecharInfo = Array.from(document.querySelectorAll("[data-modal-close]"));
+    let modalInfoAberto = null;
+
+    const fecharModalInfo = () => {
+        if (!modalInfoAberto) return;
+        modalInfoAberto.classList.remove("is-open");
+        modalInfoAberto.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        modalInfoAberto = null;
+    };
+
+    const abrirModalInfo = (idModal) => {
+        const modal = document.getElementById(idModal);
+        if (!modal || !modal.classList.contains("card-informação")) return;
+        if (modalInfoAberto && modalInfoAberto !== modal) {
+            fecharModalInfo();
+        }
+
+        modal.classList.add("is-open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        modalInfoAberto = modal;
+    };
+
+    infoModais.forEach((modal) => {
+        modal.setAttribute("aria-hidden", "true");
+    });
+
+    gatilhosInfo.forEach((gatilho) => {
+        gatilho.addEventListener("click", (event) => {
+            event.preventDefault();
+            const idModal = event.currentTarget.getAttribute("data-modal-target");
+            if (!idModal) return;
+            abrirModalInfo(idModal);
+        });
+    });
+
+    botoesFecharInfo.forEach((botao) => {
+        botao.addEventListener("click", fecharModalInfo);
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            fecharModalInfo();
+        }
+    });
+
     document.querySelectorAll(".addcarrinho").forEach((botao) => {
         botao.addEventListener("click", (event) => {
             const card = event.currentTarget.closest(".card-produtos");
@@ -112,6 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const img = card.querySelector("img")?.getAttribute("src") || "";
 
             addToCart({ id, nome, preco, img }, 1);
+            modalToggle();
         });
     });
 
@@ -248,3 +298,15 @@ document.addEventListener("DOMContentLoaded", () => {
     atualizarValoresPreco();
     aplicarFiltros();
 });
+
+
+function modalToggle() {
+    const modal = document.querySelector('.cart-modal');
+    if (modal) {
+        if (modal.style.display === 'flex') {
+            modal.style.display = 'none';
+        } else {
+            modal.style.display = 'flex';
+        }
+    }
+}

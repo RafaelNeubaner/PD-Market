@@ -370,23 +370,16 @@ nav a:hover {
 .cart-modal {
     position: fixed;
     inset: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background: rgba(0, 0, 0, 0.45);
-    opacity: 0;
-    pointer-events: none;
+    opacity: 1;
     transition: opacity .25s ease, transform .25s ease;
     z-index: 5;
     transform: scale(.98);
 }
 
-
-#cart-modal-toggle:checked~.cart-modal {
-    opacity: 1;
-    pointer-events: auto;
-    transform: scale(1);
-}
 
 .cart-modal__box {
     background: #fff;
@@ -698,6 +691,10 @@ input[type=range]::-moz-range-thumb {
     cursor: pointer;
 }
 
+.card-info-trigger {
+    cursor: pointer;
+}
+
 #informações-produtos {
     background-color: var(--fundo);
     width: 100%;
@@ -715,9 +712,6 @@ input[type=range]::-moz-range-thumb {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.card-informação {
     opacity: 0;
     border: 2px solid var(--cor-secundaria);
     padding: 1rem;
@@ -737,7 +731,7 @@ input[type=range]::-moz-range-thumb {
     padding-bottom: 2.5rem;
 }
 
-input.cardique-modal-toggle:checked + .card-informação {
+.card-informação.is-open {
     opacity: 1;
     pointer-events: auto;
     transform: scale(1);
@@ -789,10 +783,6 @@ input.cardique-modal-toggle:checked + .card-informação {
     border-radius: 8px;
     background-color: var(--suporte);
     justify-content: center;
-}
-
-input.cardique-modal-toggle {
-    display: none;
 }
 
 #sobre h1 {
