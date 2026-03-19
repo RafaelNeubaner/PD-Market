@@ -38,6 +38,12 @@ header img {
     padding: 0;
     border: none;
     margin: 0;
+    display: block;
+}
+
+#alogo {
+    display: block;
+    line-height: 0;
 }
 
 nav {

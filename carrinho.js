@@ -207,6 +207,12 @@ function atualizarSubtotal() {
 
 document.querySelectorAll('.finalizar').forEach(button => {
     button.addEventListener('click', () => {
+        const audioCompraFinalizada = document.getElementById('audio-compra-finalizada');
+        if (audioCompraFinalizada) {
+            audioCompraFinalizada.currentTime = 0;
+            audioCompraFinalizada.play().catch(() => {});
+        }
+
         alert('Compra finalizada com sucesso!');
         if (cartApi) {
             cartApi.clearCart();

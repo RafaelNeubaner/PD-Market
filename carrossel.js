@@ -1,4 +1,5 @@
 const carrossel = document.querySelector('.slides_autoplay');
+const carrosselwrap = document.querySelector('.carrossel-wrap');
 const dots = document.querySelectorAll('.dot');
 let autoplayInterval;
 
@@ -34,6 +35,30 @@ function autoplayCarrossel() {
     atualizarCarrossel();
 }
 
+carrossel.addEventListener('mouseenter',() => {
+    clearInterval(autoplayInterval);
+});
+
+carrossel.addEventListener('mouseleave', () => {
+    iniciarAutoplay();
+});
+
+carrosselwrap.addEventListener('keydown', (event) => {
+    const activeIndex = Array.from(dots).findIndex(dot => dot.classList.contains('active'));
+    if (event.key === 'ArrowRight') {
+        const nextIndex = (activeIndex + 1) % dots.length;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[nextIndex].classList.add('active');
+        atualizarCarrossel();
+        resetAutoplay();
+    } else if (event.key === 'ArrowLeft') {
+        const prevIndex = (activeIndex - 1 + dots.length) % dots.length;
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[prevIndex].classList.add('active');
+        atualizarCarrossel();
+        resetAutoplay();
+    }
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
